@@ -1,0 +1,34 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+  <h1>Demo: Image Style Transfer</h1>
+  <div id="info">
+    <p>
+      Downloading Model...
+    </p>
+    <p>
+      All computations are on the client-side, image is NEVER uploaded to server.
+    </p>
+  </div>
+  <div id="main" style="display:none">
+    <div>
+      <input id="file_selector" type="file" accept="image/*" onchange="inputFile(event)">
+      <input id="run_btn" class="button" type="button" value="Run" onclick="run()">
+    </div>
+    <canvas id="preview" width="224" height="224" style="border:1px solid #d3d3d3;">
+      Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <canvas id="result" width="224" height="224" style="border:1px solid #d3d3d3;">
+      Your browser does not support the HTML5 canvas tag.
+    </canvas>
+  </div>
+  <p>By <a href="http://haoxiang.org/academic-homepage/">Haoxiang Li<a/></p>
+  <!--<p><a href="">Blog Post:</a></p>-->
+  <p>The model is from <a href="https://github.com/onnx/models">ONNX model zoo></a></p>
+</body>
+</html>
